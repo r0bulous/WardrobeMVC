@@ -1,0 +1,77 @@
+﻿@model WardrobeMVC.Pant
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Pant</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PantName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PantName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PantPhoto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PantPhoto)
+
+            <img src="~/images/@Html.DisplayFor(model =>model.PantPhoto)" style="width:200px;" />
+
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PantNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PantNotes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PantColor.PantColor1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PantColor.PantColor1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PantOccasion.PantOccasions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PantOccasion.PantOccasions)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PantSeason.PantSeason1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PantSeason.PantSeason1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PantType.PantType1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PantType.PantType1)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PantId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

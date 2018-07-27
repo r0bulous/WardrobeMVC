@@ -1,0 +1,75 @@
+﻿@model IEnumerable<WardrobeMVC.Shirt>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ShirtName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShirtImage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShirtOccasionId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShirtNotes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShirtColor.ShirtColor1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShirtOccasion.ShirtOccasion1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShirtSeason.ShirtSeason1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ShirtType.ShirtType1)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShirtName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShirtImage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShirtOccasionId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShirtNotes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShirtColor.ShirtColor1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShirtOccasion.ShirtOccasion1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShirtSeason.ShirtSeason1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ShirtType.ShirtType1)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ShirtId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ShirtId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ShirtId })
+        </td>
+    </tr>
+}
+
+</table>

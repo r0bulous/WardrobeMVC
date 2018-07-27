@@ -1,0 +1,77 @@
+﻿@model WardrobeMVC.Belt
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Belt</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BeltName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BeltName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BeltImage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BeltImage)
+
+            <img src="~/Images/@Html.DisplayFor(model =>model.BeltImage)" style="width:200px;" />
+
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BeltNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BeltNotes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BeltColor.BeltColor1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BeltColor.BeltColor1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BeltOccasion.BeltOccasion1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BeltOccasion.BeltOccasion1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BeltSeason.BeltSeason1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BeltSeason.BeltSeason1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BeltType.BeltType1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BeltType.BeltType1)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BeltId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

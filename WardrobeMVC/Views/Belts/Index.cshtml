@@ -1,0 +1,69 @@
+﻿@model IEnumerable<WardrobeMVC.Belt>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BeltName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BeltImage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BeltNotes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BeltColor.BeltColor1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BeltOccasion.BeltOccasion1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BeltSeason.BeltSeason1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BeltType.BeltType1)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BeltName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BeltImage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BeltNotes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BeltColor.BeltColor1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BeltOccasion.BeltOccasion1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BeltSeason.BeltSeason1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BeltType.BeltType1)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.BeltId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.BeltId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.BeltId })
+        </td>
+    </tr>
+}
+
+</table>
