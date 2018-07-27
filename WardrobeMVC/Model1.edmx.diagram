@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="430c3e76fcf645c58b3d695f12c645fd" Name="Diagram1">
+        <EntityTypeShape EntityType="WardrobeDbModel.BeltColor" Width="1.5" PointX="0.75" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeDbModel.BeltOccasion" Width="1.5" PointX="0.75" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeDbModel.Belt" Width="1.5" PointX="3" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeDbModel.BeltSeason" Width="1.5" PointX="0.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeDbModel.BeltType" Width="1.5" PointX="0.75" PointY="20.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeDbModel.Outfit" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeDbModel.PantColor" Width="1.5" PointX="0.75" PointY="22.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeDbModel.PantOccasion" Width="1.5" PointX="0.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeDbModel.Pant" Width="1.5" PointX="3" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeDbModel.PantSeason" Width="1.5" PointX="0.75" PointY="27.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeDbModel.PantType" Width="1.5" PointX="0.75" PointY="29.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeDbModel.ShirtColor" Width="1.5" PointX="0.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeDbModel.ShirtOccasion" Width="1.5" PointX="0.75" PointY="34.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeDbModel.Shirt" Width="1.5" PointX="3" PointY="34.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeDbModel.ShirtSeason" Width="1.5" PointX="0.75" PointY="36.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeDbModel.ShirtType" Width="1.5" PointX="0.75" PointY="38.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeDbModel.ShoeColor" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeDbModel.ShoeOccasion" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeDbModel.Sho" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeDbModel.ShoeSeason" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeDbModel.ShoeType" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeDbModel.sysdiagram" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
+        <AssociationConnector Association="WardrobeDbModel.FK_Belts_BeltColors" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeDbModel.FK_Belts_BeltOccasions" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeDbModel.FK_Belts_BeltSeasons" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeDbModel.FK_Belts_BeltTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeDbModel.FK_Outfits_Belts" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeDbModel.FK_Outfits_Pants" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeDbModel.FK_Outfits_Shirts" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeDbModel.FK_Outfits_Shoes" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeDbModel.FK_Pants_PantColors" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeDbModel.FK_Pants_PantOccasions" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeDbModel.FK_Pants_PantSeasons" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeDbModel.FK_Pants_PantTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeDbModel.FK_Shirts_ShirtColors" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeDbModel.FK_Shirts_ShirtOccasions" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeDbModel.FK_Shirts_ShirtSeasons" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeDbModel.FK_Shirts_ShirtTypes" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeDbModel.FK_Shoes_ShoeColors" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeDbModel.FK_Shoes_ShoeOccasions" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeDbModel.FK_Shoes_ShoeSeasons" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeDbModel.FK_Shoes_ShoeTypes" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
