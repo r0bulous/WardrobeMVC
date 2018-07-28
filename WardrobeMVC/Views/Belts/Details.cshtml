@@ -4,6 +4,32 @@
     ViewBag.Title = "Details";
 }
 
+<head>
+    <style>
+
+        /* Grid setup/styling */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 10px 1fr 1fr 1fr 1fr 1fr 10px;
+            /*grid-template-rows: 50px 50px 50px 50px;*/
+            grid-gap: 10px;
+            /*background: linear-gradient(white, #ededed52, #002ba557);*/
+        }
+
+        /* Grid items */
+
+        .item1 {
+            display: flex;
+            grid-column: 2 / span 3;
+            font-weight: 800;
+            background-color: teal;
+            justify-content: flex-start;
+            background-image: url()
+        }
+
+    </style>
+</head>
+
 <h2>Details</h2>
 
 <div>
