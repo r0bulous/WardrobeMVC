@@ -302,6 +302,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstraporig.css" />
     <Content Include="Content\indexgrid.css" />
+    <Content Include="Content\outfitdetailgrid.css" />
     <Content Include="Content\itemdetailsgrid.css" />
     <Content Include="Content\origbootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -311,6 +312,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\beigekakhis.jpg" />
     <Content Include="Images\black-belt.jpg" />
     <Content Include="Images\blue loafers.jpg" />
     <Content Include="Images\brownbelt.jpg" />

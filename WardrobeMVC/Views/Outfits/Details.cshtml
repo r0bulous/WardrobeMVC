@@ -4,65 +4,116 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<header>
+    <link href="~/Content/outfitdetailgrid.css" rel="stylesheet" />  <!-- CSS layout for outfit details -->
+</header>
+
+@*<h2>@Html.DisplayFor(model => model.OutfitName)</h2>*@
 
 <div>
-    <h4>Outfit</h4>
-    <hr />
-    <img src="~/Images/@Html.DisplayFor(model =>model.Belt.BeltImage)" style="width:600px;" />
 
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.OutfitName)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.OutfitName)
-        </dd>
+    <div class="grid-container">
 
-        <dt>
-            @Html.DisplayNameFor(model => model.OutfitNotes)
-        </dt>
+        <div class="outfitTitle">
+            <h4>@Html.DisplayFor(model => model.OutfitName)</h4>
+            <p>@Html.DisplayFor(model => model.OutfitNotes)</p>
 
-        <dd>
-            @Html.DisplayFor(model => model.OutfitNotes)
-        </dd>
+        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Belt.BeltName)
-        </dt>
+        <div class="outfitDetails">
+            <p>@Html.DisplayNameFor(model => model.Shirt.ShirtName): @Html.DisplayFor(model => model.Shirt.ShirtName)</p>
+            <p>@Html.DisplayNameFor(model => model.Pant.PantName): @Html.DisplayFor(model => model.Pant.PantName)</p>
+            <p>@Html.DisplayNameFor(model => model.Sho.ShoeName)es: @Html.DisplayFor(model => model.Sho.ShoeName)</p>
+            <p>@Html.DisplayNameFor(model => model.Belt.BeltName): @Html.DisplayFor(model => model.Belt.BeltName)</p>
 
-        <dd>
-            @Html.DisplayFor(model => model.Belt.BeltName)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Pant.PantName)
-        </dt>
+        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Pant.PantName)
-        </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Shirt.ShirtName)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Shirt.ShirtName)
-        </dd>
+        <div class="shirtImg">
+            <img src="~/Images/@Html.DisplayFor(model =>model.Shirt.ShirtImage)" style="max-width:350px;" />
+        </div>
+        <div class="pantImg">
+            <img src="~/Images/@Html.DisplayFor(model =>model.Pant.PantPhoto)" style="max-width:350px;" />
+        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Sho.ShoeName)
-        </dt>
+        <div class="shoeImg">
+            <img src="~/Images/@Html.DisplayFor(model =>model.Sho.ShoePhoto)" style="max-width:350px;" />
+        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Sho.ShoeName)
-        </dd>
+        <div class="beltImg">
+            <img src="~/Images/@Html.DisplayFor(model =>model.Belt.BeltImage)" style="max-width:350px;" />
+        </div>
 
-    </dl>
+        <div class="controls">
+           <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.OutfitId }) |
+            @Html.ActionLink("Back to List", "Index")
+           </p>
+        </div>
+
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.OutfitId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+            @*<hr />
+
+
+
+            <img src="~/Images/@Html.DisplayFor(model =>model.Belt.BeltImage)" style="width:600px;" />
+
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.OutfitName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.OutfitName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.OutfitNotes)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.OutfitNotes)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Belt.BeltName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Belt.BeltName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Pant.PantName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Pant.PantName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Shirt.ShirtName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Shirt.ShirtName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Sho.ShoeName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Sho.ShoeName)
+                </dd>
+
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.OutfitId }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>*@

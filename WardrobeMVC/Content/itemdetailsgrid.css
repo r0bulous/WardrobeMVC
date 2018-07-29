@@ -1,16 +1,14 @@
 ﻿/* Grid setup/styling */
+
 .grid-container {
     display: grid;
-    grid-template-columns: 10px 1fr 1fr 1fr 1fr 1fr 10px;
-    grid-template-rows: 50px 50px auto 50px 50px;
+    grid-template-columns: 10px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10px;
+    grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
     grid-gap: 10px;
 }
 
 
 /* Grid items */
-
-/*Maintain height / width for detail images*/
-
 
 .item1 {
     display: flex;

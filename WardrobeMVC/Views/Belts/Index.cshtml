@@ -38,16 +38,13 @@
                     {
         <div class="divTableRow">
             <div class="divTableCell">@Html.DisplayFor(modelItem => item.BeltName)</div>
-            @*<div class="divTableCell">@Html.DisplayFor(modelItem => item.BeltImage)</div>*@
-
             <div class="divTablePhoto"><img src="~/Images/@Html.DisplayFor(modelItem => item.BeltImage)" style="width:75px;" /></div>
-
-                <div class="divTableCell">@Html.DisplayFor(modelItem => item.BeltNotes)</div>
-                <div class="divTableCell">@Html.DisplayFor(modelItem => item.BeltOccasion.BeltOccasion1)</div>
-                <div class="divTableCell">@Html.DisplayFor(modelItem => item.BeltSeason.BeltSeason1)</div>
-                <div class="divTableCell">@Html.DisplayFor(modelItem => item.BeltType.BeltType1)</div>
-                <div class="divTableCell">@Html.ActionLink("Edit", "Edit", new { id = item.BeltId }) | @Html.ActionLink("Details", "Details", new { id = item.BeltId }) | @Html.ActionLink("Delete", "Delete", new { id = item.BeltId })</div>
-            </div>
-        }
+            <div class="divTableCell">@Html.DisplayFor(modelItem => item.BeltNotes)</div>
+            <div class="divTableCell">@Html.DisplayFor(modelItem => item.BeltOccasion.BeltOccasion1)</div>
+            <div class="divTableCell">@Html.DisplayFor(modelItem => item.BeltSeason.BeltSeason1)</div>
+            <div class="divTableCell">@Html.DisplayFor(modelItem => item.BeltType.BeltType1)</div>
+            <div class="divTableCell">@Html.ActionLink("Edit", "Edit", new { id = item.BeltId }) | @Html.ActionLink("Details", "Details", new { id = item.BeltId }) | @Html.ActionLink("Delete", "Delete", new { id = item.BeltId })</div>
+        </div>
+     }
     </div>
 </div>
