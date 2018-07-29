@@ -23,10 +23,24 @@
             
         }
 
-        .divTableCell, .divTableHead {
+        .divTableCell {
             border: 1px solid #999999;
             display: table-cell;
             padding: 3px 10px;
+        }
+
+        .divTableHead {
+            border: 1px solid #999999;
+            display: table-cell;
+            padding: 3px 10px;
+            text-align: center;
+        }
+
+        .divTablePhoto {
+            border: 1px solid #999999;
+            display: table-cell;
+            padding: 3px 10px;
+            text-align: center;
         }
 
         .divTableHeading {
@@ -61,10 +75,9 @@
             <div class="divTableHead">@Html.DisplayNameFor(model => model.BeltName)</div>
             <div class="divTableHead">@Html.DisplayNameFor(model => model.BeltImage)</div>
             <div class="divTableHead">@Html.DisplayNameFor(model => model.BeltNotes)</div>
-            <div class="divTableHead">@Html.DisplayNameFor(model => model.BeltColor.BeltColor1)</div>
-            <div class="divTableHead">@Html.DisplayNameFor(model => model.BeltOccasion.BeltOccasion1)</div>
-            <div class="divTableHead">@Html.DisplayNameFor(model => model.BeltSeason.BeltSeason1)</div>
-            <div class="divTableHead">@Html.DisplayNameFor(model => model.BeltType.BeltType1)</div>
+            <div class="divTableHead">@Html.DisplayNameFor(model => model.BeltOccasion)</div>
+            <div class="divTableHead">@Html.DisplayNameFor(model => model.BeltSeason)</div>
+            <div class="divTableHead">@Html.DisplayNameFor(model => model.BeltType)</div>
             <div class="divTableHead">&nbsp;</div>
         </div>
         @foreach (var item in Model)
@@ -73,10 +86,9 @@
             <div class="divTableCell">@Html.DisplayFor(modelItem => item.BeltName)</div>
             @*<div class="divTableCell">@Html.DisplayFor(modelItem => item.BeltImage)</div>*@
 
-            <div class="divTableCell"><img src="~/Images/@Html.DisplayFor(modelItem => item.BeltImage)" style="width:75px;" /></div>
+            <div class="divTablePhoto"><img src="~/Images/@Html.DisplayFor(modelItem => item.BeltImage)" style="width:75px;" /></div>
 
                 <div class="divTableCell">@Html.DisplayFor(modelItem => item.BeltNotes)</div>
-                <div class="divTableCell">@Html.DisplayFor(modelItem => item.BeltColor.BeltColor1)</div>
                 <div class="divTableCell">@Html.DisplayFor(modelItem => item.BeltOccasion.BeltOccasion1)</div>
                 <div class="divTableCell">@Html.DisplayFor(modelItem => item.BeltSeason.BeltSeason1)</div>
                 <div class="divTableCell">@Html.DisplayFor(modelItem => item.BeltType.BeltType1)</div>

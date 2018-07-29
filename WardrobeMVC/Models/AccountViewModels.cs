@@ -3,6 +3,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace WardrobeMVC.Models
 {
+
+
+
     public class ExternalLoginConfirmationViewModel
     {
         [Required]
