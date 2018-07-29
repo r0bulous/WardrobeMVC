@@ -1,10 +1,62 @@
 ﻿@model IEnumerable<WardrobeMVC.Pant>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Pants";
 }
 
-<h2>Index</h2>
+@*@model IEnumerable<WardrobeMVC.Belt>
+
+@{
+    ViewBag.Title = "Belts";
+}*@
+
+<head>
+
+    <link href="~/Content/indexgrid.css" rel="stylesheet" />
+
+
+
+
+
+
+</head>
+
+<h2>Pants</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+
+
+<div class="divTable">
+    <div class="divTableBody">
+        <div class="divTableRow">
+            <div class="divTableHead">@Html.DisplayNameFor(model => model.PantName)</div>
+            <div class="divTableHead">@Html.DisplayNameFor(model => model.PantPhoto)</div>
+            <div class="divTableHead">@Html.DisplayNameFor(model => model.PantNotes)</div>
+            <div class="divTableHead">@Html.DisplayNameFor(model => model.PantOccasion)</div>
+            <div class="divTableHead">@Html.DisplayNameFor(model => model.PantSeason)</div>
+            <div class="divTableHead">@Html.DisplayNameFor(model => model.PantType)</div>
+            <div class="divTableHead">&nbsp;</div>
+        </div>
+        @foreach (var item in Model)
+        {
+            <div class="divTableRow">
+                <div class="divTableCell">@Html.DisplayFor(modelItem => item.PantName)</div>
+                <div class="divTablePhoto"><img src="~/Images/@Html.DisplayFor(modelItem => item.PantPhoto)" style="width:75px;" /></div>
+                <div class="divTableCell">@Html.DisplayFor(modelItem => item.PantNotes)</div>
+                <div class="divTableCell">@Html.DisplayFor(modelItem => item.PantOccasion.PantOccasions)</div>
+                <div class="divTableCell">@Html.DisplayFor(modelItem => item.PantSeason.PantSeason1)</div>
+                <div class="divTableCell">@Html.DisplayFor(modelItem => item.PantType.PantType1)</div>
+                <div class="divTableCell">@Html.ActionLink("Edit", "Edit", new { id = item.PantId }) | @Html.ActionLink("Details", "Details", new { id = item.PantId }) | @Html.ActionLink("Delete", "Delete", new { id = item.PantId })</div>
+            </div>
+        }
+    </div>
+</div>
+
+
+@*<h2>Index</h2> 
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -35,35 +87,38 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.PantName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PantPhoto)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PantNotes)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PantColor.PantColor1)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PantOccasion.PantOccasions)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PantSeason.PantSeason1)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PantType.PantType1)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.PantId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.PantId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.PantId })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PantName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PantPhoto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PantNotes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PantColor.PantColor1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PantOccasion.PantOccasions)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PantSeason.PantSeason1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PantType.PantType1)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.PantId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.PantId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.PantId })
+            </td>
+        </tr>
+    }
 
-</table>
+</table>*@ 
+
+   
