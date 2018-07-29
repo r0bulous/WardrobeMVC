@@ -4,60 +4,41 @@
     ViewBag.Title = "Index";
 }
 
+<header>
+    <link href="~/Content/indexgrid.css" rel="stylesheet" /> <!-- Using same grid as for item indexes -->
+</header>
+
 <h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.OutfitName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.OutfitNotes)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Belt.BeltName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Pant.PantName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Shirt.ShirtName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Sho.ShoeName)
-        </th>
-        <th></th>
-    </tr>
+<!-- Table with headers from database -->
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.OutfitName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.OutfitNotes)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Belt.BeltName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Pant.PantName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Shirt.ShirtName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Sho.ShoeName)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.OutfitId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.OutfitId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.OutfitId })
-        </td>
-    </tr>
-}
 
-</table>
+<div class="divTable">
+    <div class="divTableBody">
+        <div class="divTableRow">
+            <div class="divTableHead">@Html.DisplayNameFor(model => model.OutfitName)</div>
+            <div class="divTableHead">@Html.DisplayNameFor(model => model.Shirt.ShirtName)</div>
+            <div class="divTableHead">@Html.DisplayNameFor(model => model.Pant.PantName)</div>
+            <div class="divTableHead">@Html.DisplayNameFor(model => model.Sho.ShoeName)</div>
+            <div class="divTableHead">@Html.DisplayNameFor(model => model.Belt.BeltName)</div>
+            <div class="divTableHead">@Html.DisplayNameFor(model => model.OutfitNotes)</div>
+            <div class="divTableHead"></div>
+        </div>
+
+<!-- Table content including images -->
+
+
+        @foreach (var item in Model)
+        {
+            <div class="divTableRow">
+                <div class="divTableCell">@Html.DisplayFor(modelItem => item.OutfitName)</div>
+                <div class="divTablePhoto"><img src="~/Images/@Html.DisplayFor(modelItem => item.Shirt.ShirtImage)" style="width:75px;" /></div>
+                <div class="divTablePhoto"><img src="~/Images/@Html.DisplayFor(modelItem => item.Pant.PantPhoto)" style="width:75px;" /></div>
+                <div class="divTablePhoto"><img src="~/Images/@Html.DisplayFor(modelItem => item.Sho.ShoePhoto)" style="width:75px;" /></div>
+                <div class="divTablePhoto"><img src="~/Images/@Html.DisplayFor(modelItem => item.Belt.BeltImage)" style="width:75px;" /></div>
+                <div class="divTableCell">@Html.DisplayFor(modelItem => item.OutfitNotes)</div>
+                <div class="divTableCell">@Html.ActionLink("Edit", "Edit", new { id = item.BeltId }) | @Html.ActionLink("Details", "Details", new { id = item.BeltId }) | @Html.ActionLink("Delete", "Delete", new { id = item.BeltId })</div>
+            </div>
+        }
+    </div>
+</div>
