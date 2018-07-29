@@ -14,7 +14,7 @@ namespace WardrobeMVC
     {
     }
 
-    //Display names for belt columns
+    //Display names for pant columns
 
     public class Pantmetadata
     {

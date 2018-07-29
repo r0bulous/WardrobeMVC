@@ -235,6 +235,8 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ShoViewModel.cs" />
+    <Compile Include="Models\ShirtViewModel.cs" />
     <Compile Include="Models\PantViewModels.cs" />
     <Compile Include="Models\BeltViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
