@@ -4,72 +4,44 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<head>
+
+    <link href="~/Content/indexgrid.css" rel="stylesheet" /> <!-- Reference for CSS table -->
+
+</head>
+
+<h2>Shirts</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ShirtName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ShirtImage)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ShirtOccasionId)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ShirtNotes)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ShirtColor.ShirtColor1)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ShirtOccasion.ShirtOccasion1)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ShirtSeason.ShirtSeason1)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ShirtType.ShirtType1)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShirtName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShirtImage)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShirtOccasionId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShirtNotes)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShirtColor.ShirtColor1)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShirtOccasion.ShirtOccasion1)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShirtSeason.ShirtSeason1)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShirtType.ShirtType1)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ShirtId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ShirtId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ShirtId })
-        </td>
-    </tr>
-}
 
-</table>
+
+<div class="divTable">
+    <div class="divTableBody">
+        <div class="divTableRow">
+            <div class="divTableHead">@Html.DisplayNameFor(model => model.ShirtName)</div>
+            <div class="divTableHead">@Html.DisplayNameFor(model => model.ShirtImage)</div>
+            <div class="divTableHead">@Html.DisplayNameFor(model => model.ShirtNotes)</div>
+            <div class="divTableHead">@Html.DisplayNameFor(model => model.ShirtOccasion)</div>
+            <div class="divTableHead">@Html.DisplayNameFor(model => model.ShirtSeason)</div>
+            <div class="divTableHead">@Html.DisplayNameFor(model => model.ShirtType)</div>
+            <div class="divTableHead">&nbsp;</div>
+        </div>
+        @foreach (var item in Model)
+        {
+            <div class="divTableRow">
+                <div class="divTableCell">@Html.DisplayFor(modelItem => item.ShirtName)</div>
+                <div class="divTablePhoto"><img src="~/Images/@Html.DisplayFor(modelItem => item.ShirtImage)" style="width:75px;" /></div>
+                <div class="divTableCell">@Html.DisplayFor(modelItem => item.ShirtNotes)</div>
+                <div class="divTableCell">@Html.DisplayFor(modelItem => item.ShirtOccasion.ShirtOccasion1)</div>
+                <div class="divTableCell">@Html.DisplayFor(modelItem => item.ShirtSeason.ShirtSeason1)</div>
+                <div class="divTableCell">@Html.DisplayFor(modelItem => item.ShirtType.ShirtType1)</div>
+                <div class="divTableCell">@Html.ActionLink("Edit", "Edit", new { id = item.ShirtId }) | @Html.ActionLink("Details", "Details", new { id = item.ShirtId }) | @Html.ActionLink("Delete", "Delete", new { id = item.ShirtId })</div>
+            </div>
+        }
+    </div>
+</div>
+
+

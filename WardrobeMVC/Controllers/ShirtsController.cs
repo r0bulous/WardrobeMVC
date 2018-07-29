@@ -61,7 +61,7 @@ namespace WardrobeMVC.Controllers
             }
 
             ViewBag.ShirtColorId = new SelectList(db.ShirtColors, "ShirtColorId", "ShirtColor1", shirt.ShirtColorId);
-            ViewBag.ShirtSeasonId = new SelectList(db.ShirtOccasions, "ShirtOccasionId", "ShirtOccasion1", shirt.ShirtSeasonId);
+            ViewBag.ShirtSeasonId = new SelectList(db.ShirtOccasions, "ShirtOccasionId", "ShirtOccasion1", shirt.ShirtOccasionId);
             ViewBag.ShirtSeasonId = new SelectList(db.ShirtSeasons, "ShirtSeasonId", "ShirtSeason1", shirt.ShirtSeasonId);
             ViewBag.ShirtTypeId = new SelectList(db.ShirtTypes, "ShirtTypeId", "ShirtType1", shirt.ShirtTypeId);
             return View(shirt);
@@ -80,7 +80,7 @@ namespace WardrobeMVC.Controllers
                 return HttpNotFound();
             }
             ViewBag.ShirtColorId = new SelectList(db.ShirtColors, "ShirtColorId", "ShirtColor1", shirt.ShirtColorId);
-            ViewBag.ShirtSeasonId = new SelectList(db.ShirtOccasions, "ShirtOccasionId", "ShirtOccasion1", shirt.ShirtSeasonId);
+            ViewBag.ShirtSeasonId = new SelectList(db.ShirtOccasions, "ShirtOccasionId", "ShirtOccasion1", shirt.ShirtOccasionId);
             ViewBag.ShirtSeasonId = new SelectList(db.ShirtSeasons, "ShirtSeasonId", "ShirtSeason1", shirt.ShirtSeasonId);
             ViewBag.ShirtTypeId = new SelectList(db.ShirtTypes, "ShirtTypeId", "ShirtType1", shirt.ShirtTypeId);
             return View(shirt);
@@ -100,7 +100,7 @@ namespace WardrobeMVC.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.ShirtColorId = new SelectList(db.ShirtColors, "ShirtColorId", "ShirtColor1", shirt.ShirtColorId);
-            ViewBag.ShirtSeasonId = new SelectList(db.ShirtOccasions, "ShirtOccasionId", "ShirtOccasion1", shirt.ShirtSeasonId);
+            ViewBag.ShirtSeasonId = new SelectList(db.ShirtOccasions, "ShirtOccasionId", "ShirtOccasion1", shirt.ShirtOccasionId);
             ViewBag.ShirtSeasonId = new SelectList(db.ShirtSeasons, "ShirtSeasonId", "ShirtSeason1", shirt.ShirtSeasonId);
             ViewBag.ShirtTypeId = new SelectList(db.ShirtTypes, "ShirtTypeId", "ShirtType1", shirt.ShirtTypeId);
             return View(shirt);

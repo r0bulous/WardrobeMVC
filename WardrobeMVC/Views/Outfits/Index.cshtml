@@ -37,7 +37,7 @@
                 <div class="divTablePhoto"><img src="~/Images/@Html.DisplayFor(modelItem => item.Sho.ShoePhoto)" style="width:75px;" /></div>
                 <div class="divTablePhoto"><img src="~/Images/@Html.DisplayFor(modelItem => item.Belt.BeltImage)" style="width:75px;" /></div>
                 <div class="divTableCell">@Html.DisplayFor(modelItem => item.OutfitNotes)</div>
-                <div class="divTableCell">@Html.ActionLink("Edit", "Edit", new { id = item.BeltId }) | @Html.ActionLink("Details", "Details", new { id = item.BeltId }) | @Html.ActionLink("Delete", "Delete", new { id = item.BeltId })</div>
+                <div class="divTableCell">@Html.ActionLink("Edit", "Edit", new { id = item.OutfitId }) | @Html.ActionLink("Details", "Details", new { id = item.OutfitId }) | @Html.ActionLink("Delete", "Delete", new { id = item.OutfitId })</div>
             </div>
         }
     </div>
