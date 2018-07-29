@@ -5,60 +5,14 @@
 }
 
 <head>
-    <style>
-        /* Grid for Belts Table */
-        .divTable {
-            display: table;
-            width: 100%;
-        }
 
-        .divTableRow {
-            display: table-row;
-        }
+    <link href="~/Content/indexgrid.css" rel="stylesheet" />
 
-        .divTableHead {
-            background-color: #EEE;
-            display: table-header-group;
-            font-weight: 800;
-            
-        }
 
-        .divTableCell {
-            border: 1px solid #999999;
-            display: table-cell;
-            padding: 3px 10px;
-        }
 
-        .divTableHead {
-            border: 1px solid #999999;
-            display: table-cell;
-            padding: 3px 10px;
-            text-align: center;
-        }
 
-        .divTablePhoto {
-            border: 1px solid #999999;
-            display: table-cell;
-            padding: 3px 10px;
-            text-align: center;
-        }
 
-        .divTableHeading {
-            background-color: #EEE;
-            display: table-header-group;
-            font-weight: bold;
-        }
 
-        .divTableFoot {
-            background-color: #EEE;
-            display: table-footer-group;
-            font-weight: bold;
-        }
-
-        .divTableBody {
-            display: table-row-group;
-        }
-    </style>
 </head>
 
 <h2>Belts</h2>
@@ -97,62 +51,3 @@
         }
     </div>
 </div>
-
-@*<table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.BeltName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.BeltImage)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.BeltNotes)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.BeltColor.BeltColor1)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.BeltOccasion.BeltOccasion1)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.BeltSeason.BeltSeason1)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.BeltType.BeltType1)
-            </th>
-            <th></th>
-        </tr>
-
-    @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.BeltName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BeltImage)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BeltNotes)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BeltColor.BeltColor1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BeltOccasion.BeltOccasion1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BeltSeason.BeltSeason1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.BeltType.BeltType1)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.BeltId }) |
-                @Html.ActionLink("Details", "Details", new { id=item.BeltId }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.BeltId })
-            </td>
-        </tr>
-    }
-
-    </table>*@

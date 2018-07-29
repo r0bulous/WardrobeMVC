@@ -5,51 +5,9 @@
 }
 
 <head>
-    <style>
 
-        /* Grid setup/styling */
-        .grid-container {
-            display: grid;
-            grid-template-columns: 10px 1fr 1fr 1fr 1fr 1fr 10px;
-            grid-template-rows: 50px 50px auto 50px 50px;
-            grid-gap: 10px;
-        }
+    <link href="~/Content/itemdetailsgrid.css" rel="stylesheet" />
 
-        /* Grid items */
-
-        .item1 {
-            display: flex;
-            grid-column: 2 / span 3;
-            grid-row: 1 / span 3;
-            background-color: teal;
-            justify-content: flex-start;
-            /*background-image: url()*/
-        }
-
-        .item2 {
-            display: flex;
-            grid-column: 5 / span 2;
-            grid-row: 1;
-            justify-content: flex-start;
-            padding-top: 9px;
-        }
-
-        .item3 {
-            display: flex;
-            grid-column: 5 / span 2;
-            grid-row: 2 / span 2;
-            font-weight: 400;
-            justify-content: flex-start;
-            padding-top: 9px;
-        }
-
-        .item4 {
-            display: flex;
-            grid-column: 5;
-            grid-row: 3;
-        }
-
-    </style>
 </head>
 
 <h2>Details</h2>
@@ -60,7 +18,7 @@
     <div class="grid-container">
 
         <div class="item1">
-            <img src="~/Images/@Html.DisplayFor(model =>model.BeltImage)" style="width:800px;" />
+            <img src="~/Images/@Html.DisplayFor(model =>model.BeltImage)" style="width:600px;" />
         </div>
 
         <div class="item2">
@@ -72,76 +30,17 @@
         </div>
 
         <div class="item4">
-            <p>@Html.DisplayFor(model => model.BeltColor.BeltColor1)</p>
+            <p>@Html.DisplayNameFor(model => model.BeltType): @Html.DisplayFor(model => model.BeltType.BeltType1)</p>
+            <p>@Html.DisplayNameFor(model => model.BeltColor): @Html.DisplayFor(model => model.BeltColor.BeltColor1)</p>
+            <p>@Html.DisplayNameFor(model => model.BeltOccasion): @Html.DisplayFor(model => model.BeltOccasion.BeltOccasion1)</p>
+            <p>@Html.DisplayNameFor(model => model.BeltSeason): @Html.DisplayFor(model => model.BeltSeason.BeltSeason1)</p>
         </div>
 
-
-        @*<hr />
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.BeltName)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.BeltName)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.BeltImage)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.BeltImage)
-
-                <img src="~/Images/@Html.DisplayFor(model =>model.BeltImage)" style="width:200px;" />
-
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.BeltNotes)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.BeltNotes)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.BeltColor.BeltColor1)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.BeltColor.BeltColor1)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.BeltOccasion.BeltOccasion1)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.BeltOccasion.BeltOccasion1)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.BeltSeason.BeltSeason1)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.BeltSeason.BeltSeason1)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.BeltType.BeltType1)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.BeltType.BeltType1)
-            </dd>
-
-        </dl>*@
-
+        <div class="item5">
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.BeltId }) |
+                @Html.ActionLink("Back to List", "Index")
+            </p>
+        </div>
     </div>
-    <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.BeltId }) |
-        @Html.ActionLink("Back to List", "Index")
-    </p>
-    </div>
+</div>
