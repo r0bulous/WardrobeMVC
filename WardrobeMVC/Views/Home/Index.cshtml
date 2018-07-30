@@ -2,25 +2,57 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron" style="margin-top: 15px; background-size:cover; background-image: url(/Images/shirts.jpeg)">
-        <h1>HabbrDashR</h1>
-    <p class="lead">HabbrDashR is a catalog of wardrobe items, grouped into outfits.</p>
-
-    <p><input type="button" class="btn btn-primary btn-lg" value="View Outfits" onclick="location.href='@Url.Action("Index", "Outfits")'" /></p>
-</div>
 
 
-@*<div class="container">
-    <!--Creating Jumbotron inside container-->
-    <div class="jumbotron" style="margin-top: 15px;
-        <!-- style Text Color for h2-->
-        <h2 style="color:#200662">Bootstrap Jumbotron</h2>
-        <p><i>Welcome!Learn Bootstrap...</i></p>
-        <p><a href="#" class="btn btn-primary" role="button">See More</a></p>
+<div class="jumbotron">
+
+    <h1>HabbrDashR</h1>
+    <p>We have clothes that can be grouped into outfits.</p>
+
+    <p><input type="button" class="btn btn-primary" value="View Outfits" onclick="location.href='@Url.Action("Index", "Outfits")'" /></p>
+
+
+
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="~/Images/blue loafers.jpg" alt="Shoes" style="width:100%;">
+            </div>
+
+            <div class="item">
+                <img src="~/Images/redshirt.jpg" alt="Shirts" style="width:100%;">
+            </div>
+
+            <div class="item">
+                <img src="~/Images/beigekakhis.jpg" alt="Pants" style="width:100%;">
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
 </div>
-<script src="js/jquery-2.1.4.min.js"></script>
-<script src="js/bootstrap.min.js"></script>*@
+
+
+
 
 
 <div class="row">
@@ -28,7 +60,6 @@
         <h2>Shirts</h2>
         <p>HabbrDashR includes a collection of shirts, including formal and casual shirts for several seasons and occasions.</p>
         <p><input type="button" class="btn btn-default" value="Shirts" onclick="location.href='@Url.Action("Index", "Shirts")'" /></p>
-
     </div>
 
     <div class="col-md-3">
@@ -42,6 +73,7 @@
         <p>Shoes are also included. Lorem ipsum, etc.</p>
         <p><input type="button" class="btn btn-default" value="Shoes" onclick="location.href='@Url.Action("Index", "Shoes")'" /></p>
     </div>
+
     <div class="col-md-3">
         <h2>Belts</h2>
         <p>Belts are an important item, epsecially if you choose to wear pants without drawstrings. Look here to see the bets that are in our collection.</p>

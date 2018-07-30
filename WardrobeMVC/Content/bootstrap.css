@@ -5382,7 +5382,7 @@ a.badge:hover, a.badge:focus {
     padding-bottom: 30px;
     margin-bottom: 30px;
     color: inherit;
-    background-color: #eeeeee
+    background-color: white;
 }
 
     .jumbotron h1, .jumbotron .h1 {
@@ -5394,8 +5394,8 @@ a.badge:hover, a.badge:focus {
         font-size: 25px;
         font-weight: 600;
         font-family: "Cabin Sketch";
-        color: white;
-        text-shadow: 5px 5px 5px #000;
+        color: black;
+        text-shadow: 5px 5px 5px #ddd;
         }
 
     .jumbotron > hr {
