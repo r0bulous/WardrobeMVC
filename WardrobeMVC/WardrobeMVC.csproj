@@ -301,14 +301,10 @@
     <Content Include="Content\bootstap.min.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrapsketch.css" />
-    <Content Include="Content\bootstrapsketch.min.css" />
     <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstraporig.css" />
     <Content Include="Content\indexgrid.css" />
     <Content Include="Content\outfitdetailgrid.css" />
     <Content Include="Content\itemdetailsgrid.css" />
-    <Content Include="Content\origbootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -321,7 +317,9 @@
     <Content Include="Images\blue loafers.jpg" />
     <Content Include="Images\brownbelt.jpg" />
     <Content Include="Images\fadedjeans.jpg" />
+    <Content Include="Images\gloves.jpeg" />
     <Content Include="Images\redshirt.jpg" />
+    <Content Include="Images\shirts.jpeg" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>

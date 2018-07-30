@@ -2,30 +2,49 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<div class="jumbotron" style="margin-top: 15px; background-size:cover; background-image: url(/Images/shirts.jpeg)">
+        <h1>HabbrDashR</h1>
+    <p class="lead">HabbrDashR is a catalog of wardrobe items, grouped into outfits.</p>
+
+    <p><input type="button" class="btn btn-primary btn-lg" value="View Outfits" onclick="location.href='@Url.Action("Index", "Outfits")'" /></p>
 </div>
 
+
+@*<div class="container">
+    <!--Creating Jumbotron inside container-->
+    <div class="jumbotron" style="margin-top: 15px;
+        <!-- style Text Color for h2-->
+        <h2 style="color:#200662">Bootstrap Jumbotron</h2>
+        <p><i>Welcome!Learn Bootstrap...</i></p>
+        <p><a href="#" class="btn btn-primary" role="button">See More</a></p>
+    </div>
+</div>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>*@
+
+
 <div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    <div class="col-md-3">
+        <h2>Shirts</h2>
+        <p>HabbrDashR includes a collection of shirts, including formal and casual shirts for several seasons and occasions.</p>
+        <p><input type="button" class="btn btn-default" value="Shirts" onclick="location.href='@Url.Action("Index", "Shirts")'" /></p>
+
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+
+    <div class="col-md-3">
+        <h2>Pants</h2>
+        <p>Our catalog includes a collection of pants, including formal and casual pants for various purposes.</p>
+        <p><input type="button" class="btn btn-default" value="Pants" onclick="location.href='@Url.Action("Index", "Pants")'" /></p>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+
+    <div class="col-md-3">
+        <h2>Shoes</h2>
+        <p>Shoes are also included. Lorem ipsum, etc.</p>
+        <p><input type="button" class="btn btn-default" value="Shoes" onclick="location.href='@Url.Action("Index", "Shoes")'" /></p>
+    </div>
+    <div class="col-md-3">
+        <h2>Belts</h2>
+        <p>Belts are an important item, epsecially if you choose to wear pants without drawstrings. Look here to see the bets that are in our collection.</p>
+        <p><input type="button" class="btn btn-default" value="Belts" onclick="location.href='@Url.Action("Index", "Belts")'" /></p>
     </div>
 </div>
