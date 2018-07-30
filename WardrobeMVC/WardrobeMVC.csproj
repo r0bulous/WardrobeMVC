@@ -312,14 +312,19 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\bearshirt.png" />
     <Content Include="Images\beigekakhis.jpg" />
     <Content Include="Images\black-belt.jpg" />
+    <Content Include="Images\blackandredshirt.jpeg" />
+    <Content Include="Images\blackbelt2.jpeg" />
+    <Content Include="Images\blackjeans.jpeg" />
     <Content Include="Images\blue loafers.jpg" />
+    <Content Include="Images\bluejeans.jpg" />
     <Content Include="Images\brownbelt.jpg" />
-    <Content Include="Images\fadedjeans.jpg" />
-    <Content Include="Images\gloves.jpeg" />
+    <Content Include="Images\dressybrownshoes.jpeg" />
     <Content Include="Images\redshirt.jpg" />
-    <Content Include="Images\shirts.jpeg" />
+    <Content Include="Images\whiteshirtwithbow.jpg" />
+    <Content Include="Images\workshoes.jpeg" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
