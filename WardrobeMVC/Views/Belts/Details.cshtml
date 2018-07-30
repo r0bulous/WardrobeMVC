@@ -6,23 +6,23 @@
 
 <head>
 
-    <link href="~/Content/itemdetailsgrid.css" rel="stylesheet" />
+    <link href="~/Content/itemdetailsgrid.css" rel="stylesheet" /> <!-- Detils stylesheet with lay-->
 
 </head>
 
-<h2>Details</h2>
 
 <div>
-    <h4>Belt</h4>
 
     <div class="grid-container">
 
         <div class="item1">
-            <img src="~/Images/@Html.DisplayFor(model =>model.BeltImage)" style="width:600px;" />
+
+             <img src="~/Images/@Html.DisplayFor(model => model.BeltImage)" style="width:600px;" /> 
+            
         </div>
 
         <div class="item2">
-            <h2>@Html.DisplayFor(model => model.BeltName)</h2>
+            <h4>@Html.DisplayFor(model => model.BeltName)</h4>
         </div>
 
         <div class="item3">
@@ -42,5 +42,6 @@
                 @Html.ActionLink("Back to List", "Index")
             </p>
         </div>
+
     </div>
 </div>

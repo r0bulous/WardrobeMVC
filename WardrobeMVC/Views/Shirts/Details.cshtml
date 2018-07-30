@@ -4,82 +4,126 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<head>
+
+    <link href="~/Content/itemdetailsgrid.css" rel="stylesheet" /> <!-- Detils stylesheet with layout -->
+
+</head>
+
 
 <div>
-    <h4>Shirt</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.ShirtName)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ShirtName)
-        </dd>
+    <div class="grid-container">
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ShirtImage)
+        <div class="item1">
 
-            <img src="~/images/@Html.DisplayFor(model =>model.ShirtImage)" style="width:200px;" />
+            <img src="~/Images/@Html.DisplayFor(model => model.ShirtImage)" style="width:600px;" />
 
-        </dt>
+        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.ShirtImage)
-        </dd>
+        <div class="item2">
+            <h4>@Html.DisplayFor(model => model.ShirtName)</h4>
+        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ShirtOccasionId)
-        </dt>
+        <div class="item3">
+            <p>@Html.DisplayFor(model => model.ShirtNotes)</p>
+        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.ShirtOccasionId)
-        </dd>
+        <div class="item4">
+            <p>@Html.DisplayNameFor(model => model.ShirtType): @Html.DisplayFor(model => model.ShirtType.ShirtType1)</p>
+            <p>@Html.DisplayNameFor(model => model.ShirtColor): @Html.DisplayFor(model => model.ShirtColor.ShirtColor1)</p>
+            <p>@Html.DisplayNameFor(model => model.ShirtOccasion): @Html.DisplayFor(model => model.ShirtOccasion.ShirtOccasion1)</p>
+            <p>@Html.DisplayNameFor(model => model.ShirtSeason): @Html.DisplayFor(model => model.ShirtSeason.ShirtSeason1)</p>
+        </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ShirtNotes)
-        </dt>
+        <div class="item5">
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.ShirtId }) |
+                @Html.ActionLink("Back to List", "Index")
+            </p>
+        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.ShirtNotes)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ShirtColor.ShirtColor1)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ShirtColor.ShirtColor1)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ShirtOccasion.ShirtOccasion1)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ShirtOccasion.ShirtOccasion1)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ShirtSeason.ShirtSeason1)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ShirtSeason.ShirtSeason1)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ShirtType.ShirtType1)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ShirtType.ShirtType1)
-        </dd>
-
-    </dl>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ShirtId }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+
+
+@*<h2>Details</h2>
+
+    <div>
+        <h4>Shirt</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.ShirtName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ShirtName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ShirtImage)
+
+                <img src="~/images/@Html.DisplayFor(model =>model.ShirtImage)" style="width:200px;" />
+
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ShirtImage)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ShirtOccasionId)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ShirtOccasionId)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ShirtNotes)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ShirtNotes)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ShirtColor.ShirtColor1)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ShirtColor.ShirtColor1)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ShirtOccasion.ShirtOccasion1)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ShirtOccasion.ShirtOccasion1)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ShirtSeason.ShirtSeason1)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ShirtSeason.ShirtSeason1)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ShirtType.ShirtType1)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ShirtType.ShirtType1)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ShirtId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>*@
