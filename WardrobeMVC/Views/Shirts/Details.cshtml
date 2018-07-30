@@ -6,7 +6,7 @@
 
 <head>
 
-    <link href="~/Content/itemdetailsgrid.css" rel="stylesheet" /> <!-- Detils stylesheet with layout -->
+    <link href="~/Content/itemdetailsgrid.css" rel="stylesheet" /> <!-- Details stylesheet with layout -->
 
 </head>
 
@@ -45,85 +45,3 @@
 
     </div>
 </div>
-
-
-
-@*<h2>Details</h2>
-
-    <div>
-        <h4>Shirt</h4>
-        <hr />
-        <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => model.ShirtName)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.ShirtName)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.ShirtImage)
-
-                <img src="~/images/@Html.DisplayFor(model =>model.ShirtImage)" style="width:200px;" />
-
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.ShirtImage)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.ShirtOccasionId)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.ShirtOccasionId)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.ShirtNotes)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.ShirtNotes)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.ShirtColor.ShirtColor1)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.ShirtColor.ShirtColor1)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.ShirtOccasion.ShirtOccasion1)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.ShirtOccasion.ShirtOccasion1)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.ShirtSeason.ShirtSeason1)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.ShirtSeason.ShirtSeason1)
-            </dd>
-
-            <dt>
-                @Html.DisplayNameFor(model => model.ShirtType.ShirtType1)
-            </dt>
-
-            <dd>
-                @Html.DisplayFor(model => model.ShirtType.ShirtType1)
-            </dd>
-
-        </dl>
-    </div>
-    <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.ShirtId }) |
-        @Html.ActionLink("Back to List", "Index")
-    </p>*@
